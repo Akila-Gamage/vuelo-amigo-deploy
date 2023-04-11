@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<title>Vuelo Amigo/ViewReview</title>
+
+<link rel="shortcut icon" href="{{ url_for('static', filename='welcome_page/Assets/Img/favicon.png') }}" type="image/x-icon">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet">
+
+<!-- Stylesheets -->
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/font-awesome-all.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/flaticon.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/owl.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/animate.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/jquery-ui.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/nice-select.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/color/theme-color.css') }}" id="jssDefault" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/switcher-style.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/style.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='ViewReviewPage/assets/css/responsive.css') }}" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+<body>
+
+    <div class="boxed_wrapper">
+
+
+
+        <!--Page Title-->
+        <section class="page-title centred" style="background-image: url({{ url_for('static', filename='ViewReviewPage/assets/images/background.jpg') }}">
+            <div class="auto-container">
+                <div class="content-box clearfix">
+                    <h1>Reviews</h1>
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{{ url_for('views.dashboard') }}">DashBoard</a></li>
+                        <li>Reviews</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--End Page Title-->
+
+
+        <!-- sidebar-page-container -->
+        <section class="sidebar-page-container blog-grid sec-pad-2">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="blog-grid-content">
+                            <div class="row clearfix">
+<!-- {#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">Including Animation In Your Design System</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">Eva Green</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 10, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">Taking The Pattern Library To The Next Level</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-2.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">George Clooney</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 09, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">How New Font Technologies Will Improve The Web</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-3.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">Simon Baker</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 28, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">The Most Inspiring Interior Design For Your Home.</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">Eva Green</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 10, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">Secrets To Totally Rocking Your Real Estate.</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-2.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">George Clooney</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 09, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">This Week I Thought It Would Be Good.</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-3.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">Simon Baker</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 28, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">Reader’s Look On An Important Steps Needed.</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-1.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">Eva Green</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 10, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">We’ll Bring You The Best In Donec Luctus.</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-2.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">George Clooney</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 09, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">They’re One Of The Industry Thought Leaders.</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-3.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">Simon Baker</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 28, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                                <div class="col-lg-6 col-md-6 col-sm-12 news-block">#}
+{#                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="600ms" data-wow-duration="1500ms">#}
+{#                                        <div class="inner-box">#}
+{#                                            <div class="image-box">#}
+{#                                                <figure class="image"><a href="blog-details.html"><img src="" alt=""></a></figure>#}
+{#                                                <span class="category">Featured</span>#}
+{#                                            </div>#}
+{#                                            <div class="lower-content">#}
+{#                                                <h4><a href="blog-details.html">A Digital Prescription For The Pharma Industry.</a></h4>#}
+{#                                                <ul class="post-info clearfix">#}
+{#                                                    <li class="author-box">#}
+{#                                                        <figure class="author-thumb"><img src="assets/images/news/author-3.jpg" alt=""></figure>#}
+{#                                                        <h5><a href="blog-details.html">Simon Baker</a></h5>#}
+{#                                                    </li>#}
+{#                                                    <li>April 28, 2020</li>#}
+{#                                                </ul>#}
+{#                                                <div class="text">#}
+{#                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing sed.</p>#}
+{#                                                </div>#}
+{#                                                <div class="btn-box">#}
+{#                                                    <a href="blog-details.html" class="theme-btn btn-two">See Details</a>#}
+{#                                                </div>#}
+{#                                            </div>#}
+{#                                        </div>#}
+{#                                    </div>#}
+{#                                </div>#} -->
+                                <ul class="list-group list-group-flush" id="notes">
+                                    {% for note in user.notes %}
+                                    <div class="news-block-one wow fadeInUp animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                                    <div class="inner-box">
+                                        <li class="list-group-item">
+                                            <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <br>
+                                            <br>
+                                            {{ note.data }}
+                                            <br>
+                                            <br>
+                                            <button type="button" class="theme-btn" onClick="inputText({{note.id}})">
+                                                <span aria-hidden="true">Analyze</span>
+                                            </button>
+                                            <br>
+                                            <br>
+<!-- {#                                            <p>Result: <span id="result"></span></p>#} -->
+                                        </li>
+                                    </div>
+                                    </div>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <div class="pagination-wrapper">
+                                <ul class="pagination clearfix">
+                                    <li><a href="blog-1.html" class="current">1</a></li>
+                                    <li><a href="blog-1.html">2</a></li>
+                                    <li><a href="blog-1.html">3</a></li>
+                                    <li><a href="blog-1.html"><i class="fas fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="blog-sidebar">
+                            <div class="sidebar-widget search-widget">
+                                <div class="widget-title">
+                                    <h4>Search</h4>
+                                </div>
+                                <div class="search-inner">
+                                    <form method="post">
+                                        <div class="form-group">
+                                            <input type="search" name="search_field" placeholder="Search" required="">
+                                            <button type="submit"><i class="fas fa-search"></i></button>
+                                            <br>
+                                            <a href="{{ url_for('views.addreview') }}" class="theme-btn btn-one">Add a New Review</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="sidebar-widget social-widget">
+                                <div class="widget-title">
+                                    <h4>Results</h4>
+                                    <br>
+                                    <p id="result_final" class="result_final"></p>
+                                </div>
+                                <ul class="social-links clearfix">
+<!-- {#                                    <li><a href="blog-1.html"><i class="fab fa-facebook-f"></i></a></li>#}
+{#                                    <li><a href="blog-1.html"><i class="fab fa-google-plus-g"></i></a></li>#}
+{#                                    <li><a href="blog-1.html"><i class="fab fa-twitter"></i></a></li>#}
+{#                                    <li><a href="blog-1.html"><i class="fab fa-linkedin-in"></i></a></li>#}
+{#                                    <li><a href="blog-1.html"><i class="fab fa-instagram"></i></a></li>#} -->
+                                    <p></p>
+                                </ul>
+                            </div>
+
+
+                            <div class="sidebar-widget tags-widget">
+                                <div class="widget-title">
+                                    <h4>Popular Tags</h4>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="tags-list clearfix">
+                                        <li><a href="#">Good Service</a></li>
+                                        <li><a href="#">Food</a></li>
+                                        <li><a href="#">Attentive</a></li>
+                                        <li><a href="#l">Air Hostess</a></li>
+                                        <li><a href="#">Crash Landing</a></li>
+                                        <li><a href="#">Seating Space</a></li>
+                                        <li><a href="#">Listing</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sidebar-page-container -->
+
+
+
+   
+
+
+
+        <!--Scroll to top-->
+        <button class="scroll-top scroll-to-target" data-target="html">
+            <span class="fal fa-angle-up"></span>
+        </button>
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/popper.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/owl.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/validation.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/jquery.fancybox.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/scrollbar.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/isotope.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/jquery.nice-select.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/jQuery.style.switcher.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/jquery-ui.js') }}"></script>
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/product-filter.js') }}"></script>
+
+    <!-- main-js -->
+    <script src="{{ url_for('static', filename='ViewReviewPage/assets/js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='/index.js') }}"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sentiment/4.1.0/sentiment.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script>
+      $(document).ready(function() {
+        $('#submit').click(function() {
+          var noteId = $('#noteId').val();
+          $.ajax({
+            type: 'POST',
+            url: '/input',
+            data: JSON.stringify({noteId: noteId}),
+            contentType: 'application/json',
+            dataType: 'json',
+            success: function(response) {
+              $('#result').text(response.result);
+            }
+          });
+        });
+      });
+    </script>  -->
+
+
+        <script type="text/javascript">
+            function inputText(noteId){
+                fetch("/input", {
+                    method: "POST",
+                    body: JSON.stringify({ noteId: noteId }),
+                }).then((response) =>  response.json())
+                .then((data) => {
+                    let result = data.result;
+                    console.log(result);
+                    var result_final = document.getElementById("result_final");
+                    result_final.innerText = result;
+
+                });
+                
+            }
+        </script>
+
+        <script type="text/javascript">
+			function deleteNote(noteId) {
+				fetch("/delete-note", {
+					body: JSON.stringify({ noteId: noteId }),
+					method: "POST",
+				}).then((_res) => {
+					window.location.href = "/viewreview";
+				});
+			}
+		</script>
+        
+</body><!-- End of .page_wrapper -->
+
+<!-- Mirrored from azim.commonsupport.com/Realshed/blog-1.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Dec 2022 13:33:33 GMT -->
+</html>
